@@ -20,7 +20,7 @@ public class GenerateMap : MonoBehaviour
     //offset to space the model based on hex size
     private float xOffset = 0.88f;
     private float zOffset = .765f;
-    void Start()
+    void Awake()
     {
         maptiles = new GameObject[map_rows,map_columns];
 
@@ -41,6 +41,7 @@ public class GenerateMap : MonoBehaviour
                 
             }
         }
+        
     }
 
     // Update is called once per frame
