@@ -20,7 +20,7 @@ public class HexStatus : MonoBehaviour
     void Update()
     {
        //if "A" Key is pressed toggle Debug UI
-        if (Input.GetKeyDown(KeyCode.A)) ToggleCoordinateUI();
+        if (Input.GetKeyDown(KeyCode.L)) ToggleCoordinateUI();
     }
 
     /// <summary>
