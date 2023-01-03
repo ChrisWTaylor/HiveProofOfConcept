@@ -38,7 +38,7 @@ public class GenerateMap : MonoBehaviour
                 else{
                     maptiles[tempRow, tempCol] = Instantiate(hexPrefab, new Vector3(tempRow * xOffset, 0, tempCol *zOffset), Quaternion.identity);
                 }
-                
+                maptiles[tempRow, tempCol].GetComponent<HexStatus>().SetGameBoardCords(tempRow, tempCol);
             }
         }
         
@@ -49,4 +49,5 @@ public class GenerateMap : MonoBehaviour
     {
         
     }
+
 }
