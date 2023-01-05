@@ -9,7 +9,7 @@ public class HexStatus : MonoBehaviour
     //Int Array which holds the gamebaord cordantes for this hex, has getter and setter function
     public int[] gameBoardCoords = new int[2];
     //Refernce to text mesh object for displaying the game board coordinates
-    public TextMesh coordsText;
+    private TextMesh coordsText;
     void Start()
     {
         coordsText = transform.Find("GameBoardPositionText").GetComponent<TextMesh>();
