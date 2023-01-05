@@ -27,6 +27,8 @@ public class HoverReportScipt : MonoBehaviour
     {
         //Set color to red on hover
         meshRender.material.color = Color.red;
+
+        //Report current object to the game manager to the hoveredObj
         gm.hoveredObject = transform.parent.gameObject;
     }
     private void OnMouseExit()
@@ -40,6 +42,7 @@ public class HoverReportScipt : MonoBehaviour
         {
             meshRender.material = pieceStatus.blackMaterial;
         }
+        //Clear hovered object from gamemanager script
         gm.hoveredObject = null;
     }
 }

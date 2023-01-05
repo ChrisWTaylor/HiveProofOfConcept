@@ -239,10 +239,10 @@ MonoBehaviour:
   pickedUpObject: {fileID: 0}
   hoveredObject: {fileID: 0}
   TempObjectForTesting: {fileID: 985228886}
-  mouseOffset: 5
+  mouseOffset: 2.5
   rayLM:
     serializedVersion: 2
-    m_Bits: 128
+    m_Bits: 0
 --- !u!1 &546154562
 GameObject:
   m_ObjectHideFlags: 0
