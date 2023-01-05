@@ -54,9 +54,14 @@ public class GamePieceStatus : MonoBehaviour
     {
         
     }
+    /// <summary>
+    /// Set the type of piece for movement rules 
+    /// </summary>
+    /// <param name="pt"> Must set the enum PieceType.  Can be Ant,Beetle,Grasshopper,Spider,QueenBee</param>
     public void SetPeiceType(PieceType pt)
     {
         thisPiece = pt;
+        //Get label and set the text to match the piece type
         TempLabel = transform.Find("TempLabel").GetComponent<TextMesh>();
         switch (pt)
         {
@@ -78,7 +83,10 @@ public class GamePieceStatus : MonoBehaviour
         }
 
     }
-
+    /// <summary>
+    /// Set the team of the piece.
+    /// </summary>
+    /// <param name="team">Must set as enum of Team. Can be white or black.</param>
     public void SetTeam(Team team)
     {
         thisTeam = team;
@@ -90,5 +98,22 @@ public class GamePieceStatus : MonoBehaviour
             TempLabel.color = Color.white;
         }
         
+    }
+    private void OnMouseEnter()
+    {
+        //  meshRend.material.color = Color.red;
+        Debug.Log("Mouse Enter Detected");
+    }
+
+    private void OnMouseExit()
+    {
+        //meshRend.material.color = Color.white;
+        /**    if(pieceStatus.thisTeam == GamePieceStatus.Team.White) {
+                meshRend.material.color = Color.white;
+            }
+            else
+            {
+                meshRend.material = pieceStatus.blackMaterial;
+            }**/
     }
 }
