@@ -22,6 +22,8 @@ public class GamePieceStatus : MonoBehaviour
     public PieceType thisPiece;
     public Team thisTeam;
 
+    public Material blackMaterial;
+
     public TextMesh TempLabel;
     void Start()
     {
@@ -81,5 +83,12 @@ public class GamePieceStatus : MonoBehaviour
     {
         thisTeam = team;
         //Change Peice Color (to be added)
+        if(thisTeam == Team.Black)
+        {
+            GetComponentInChildren<MeshRenderer>().material = blackMaterial;
+            TempLabel = transform.Find("TempLabel").GetComponent<TextMesh>();
+            TempLabel.color = Color.white;
+        }
+        
     }
 }

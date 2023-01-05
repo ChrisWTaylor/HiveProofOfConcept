@@ -241,3 +241,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ddc9e1c6ee78f14198986876ea80751, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  thisPiece: 0
+  thisTeam: 0
+  blackMaterial: {fileID: 2100000, guid: 93124afb98df4964b9a45b4a7a8d9f3f, type: 2}
+  TempLabel: {fileID: 0}
